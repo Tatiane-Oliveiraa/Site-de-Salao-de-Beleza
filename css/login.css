@@ -1,0 +1,426 @@
+body {
+  background-image: linear-gradient(rgba(255,0,0,0), rgba(243, 112, 182, 0.829)); /* Degradê rosa */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #ffe6f0;
+  padding-bottom: 50px; /* ajuste conforme a altura real do footer */
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Definindo o fundo escuro e o texto branco no modo escuro */
+body.dark-mode {
+  background: linear-gradient(to bottom, #181818, #2b2b2b);
+  background-color: #121212; /* Fundo escuro */
+  color: rgb(255, 255, 255); /* Texto branco */
+}
+
+body.dark-mode .container {
+  
+  display: flex;
+  padding: 40px 40px;
+  gap: 30px;
+}
+
+body.dark-mode .card {
+  background-color: #01010180;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #04040460
+ 
+}
+
+body.dark-mode h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ffffff
+}
+
+body.dark-mode .label-float input{
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #ffffff;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  color: white;
+  
+}
+
+body.dark-mode .label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+body.dark-mode .label-float input:focus{
+  border-bottom: 2px solid #ffffff;
+}
+
+body.dark-mode .label-float label{
+  color: #f2f2f4;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
+
+body.dark-mode .label-float input:focus + label,
+body.dark-mode .label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #f7f7f7
+}
+
+body.dark-mode button{
+  background-color: transparent;
+  border-color: #fefeff;
+  color: #f0eff4;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+body.dark-mode button:hover{
+  background-color: #d609cc;
+  color: #fff;
+}
+
+body.dark-mode .justify-center{
+  display: flex;
+  justify-content: center;
+}
+
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 60%;
+}
+
+body.dark-mode p{
+  color: #ffffff;
+  font-size: 14pt;
+  text-align: center;
+}
+
+body.dark-mode a{
+  color: #f002e4;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+body.dark-mode a:hover{
+  color: #ffffff;
+}
+
+
+/* Estilo para o header no modo escuro */
+body.dark-mode header {
+  background-color: #1e1e1e; /* Fundo escuro para o header */
+  color: white; /* Texto branco no header */
+}
+
+/* Links no header */
+body.dark-mode header a {
+  color: white; /* Links brancos */
+}
+
+/* Logo no modo escuro */
+body.dark-mode .logo img {
+  filter: brightness(0) invert(1); /* Inverte a logo, caso necessário */
+}
+
+body.dark-mode .add-btn {
+  background-color: #262525;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(206, 51, 131, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+body.dark-mode .texto-principal p {
+  color: white;
+}
+
+
+/* Estilo para o Footer no modo escuro */
+body.dark-mode footer {
+  background-color: #1e1e1e; /* Fundo escuro para o footer */
+  color: white; /* Texto branco */
+}
+
+/* Caixa do footer */
+body.dark-mode .footer .box-line-footer {
+  background-color: #2c2c2c; /* Fundo escuro nas caixas do footer */
+}
+
+/* Links dentro do footer */
+body.dark-mode .footer .links-footer a {
+  color: #fec0e9; /* Cor dos links no footer */
+}
+
+
+/* Garantir que o modo escuro ative o modo escuro na área do footer */
+body.dark-mode footer .line-footer2 {
+  background-color: #1e1e1e;
+}
+
+/* Para o botão de alternar modo escuro */
+#toggle-dark {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #b30059;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+/* Efeito hover do botão */
+#toggle-dark:hover {
+  background-color: #e60073;
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  border-bottom: 3px solid pink;
+}
+
+.logo {
+  font-size: 80px;
+  color: #b30059;
+  font-weight: bold;
+  display: flex;
+  align-items: relative;
+  gap: 8px;
+}
+
+.logo .icon {
+  font-size: 42px;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: #ffffff80;
+  padding: 30px;
+  border-radius: 4%;
+  box-shadow: 3px 3px 1px 0px #00000060
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+  color: #272262
+}
+
+.label-float input{
+  width: 100%;
+  padding: 5px 5px;
+  display: inline-block;
+  border: 0;
+  border-bottom: 2px solid #272262;
+  background-color: transparent;
+  outline: none;
+  min-width: 180px;
+  font-size: 16px;
+  transition: all .3s ease-out;
+  border-radius: 0;
+  
+}
+
+.label-float{
+  position: relative;
+  padding-top: 13px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.label-float input:focus{
+  border-bottom: 2px solid #4038a0;
+}
+
+.label-float label{
+  color: #272262;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 13px;
+  transition: all .3s ease-out;
+}
+
+.label-float input:focus + label,
+.label-float input:valid + label{
+  font-size: 13px;
+  margin-top: 0;
+  color: #4038a0
+}
+
+button{
+  background-color: transparent;
+  border-color: #272262;
+  color: #272262;
+  padding: 7px;
+  font-weight: bold;
+  font-size: 12pt;
+  margin-top: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  transition: all .4s ease-out;
+}
+
+button:hover{
+  background-color: #272262;
+  color: #fff;
+}
+
+.justify-center{
+  display: flex;
+  justify-content: center;
+}
+
+hr{
+  margin-top: 10%;
+  margin-bottom: 10%;
+  width: 60%;
+}
+
+p{
+  color: #272262;
+  font-size: 14pt;
+  text-align: center;
+}
+
+a{
+  color: #7a3077;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all .3s ease-out;
+}
+
+a:hover{
+  color: #272262;
+}
+
+
+
+ #msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: "Urbanist" , sans-serif;
+}
+
+.interface{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+footer{
+  background-color:#b30059;
+  color: #fff;
+  padding: 40px 0;
+  border-bottom: 2px solid #fff;
+}
+
+footer .line-footer1{
+  text-align: center;
+}
+
+footer .box-line-footer img{
+  max-width: 100px;
+  margin-bottom: 10px;
+
+}
+
+footer .line-footer2{
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+
+footer .line-footer2 .box-line-footer{
+  max-width: calc(100% / 5);
+}
+
+.line-footer2 .box-line-footer h3{
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.line-footer2 .box-line-footer a{
+  color: #fff;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.box-line-footer .btn-redes a{
+  display: inline;
+}
+
+.line-footer2 .box-line-footer button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: .2s;
+}
+
+.line-footer2 .box-line-footer button:hover{
+  background-color: #fff;
+  border-color: #fff;
+}
+
+footer .line-footer3{
+  padding-top:40px;
+  text-align: center;
+}

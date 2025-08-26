@@ -1,0 +1,220 @@
+/* Cabeçalho só para a página do carrinho */
+.page-carrinho header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  font-family: 'Montserrat', sans-serif;
+  gap: 40px;
+}
+
+.page-carrinho header .logo img {
+  max-height: 100px;
+  width: auto;
+}
+
+.page-carrinho header nav.cabecalho {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  align-items: center;
+}
+
+.page-carrinho header nav.cabecalho a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.page-carrinho header nav.cabecalho a:hover,
+.page-carrinho header nav.cabecalho a.active {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.page-carrinho header .darkmode {
+  margin-left: 0;
+  display: flex;
+  align-items: center;
+}
+
+.page-carrinho header .darkmode button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.page-carrinho header .darkmode button:hover {
+  background-color: #e0559f;
+}
+
+/* Estilo básico para o carrinho e botões de quantidade */
+.products {
+  max-width: 700px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #fff;
+  gap: 30px;
+}
+
+.product h3 {
+  margin: 0;
+  font-weight: 600;
+  flex: 1;
+}
+
+.price {
+  width: 90px;
+  text-align: right;
+  font-weight: 600;
+  color: #333;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+
+.qty-controls button {
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #e91e63;
+  border: none;
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.qty-controls button:hover {
+  background-color: #c31551;
+}
+
+.qty-controls span {
+  min-width: 25px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.total {
+  max-width: 700px;
+  margin: 30px auto;
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.checkout-btn {
+  padding: 10px 25px;
+  background-color: #e91e63;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+  background-color: #c31551;
+}
+
+.reset-btn {
+  background-color: #e74c3c; /* vermelho vibrante */
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(231, 76, 60, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b; /* vermelho mais escuro ao passar o mouse */
+  box-shadow: 0 6px 12px rgba(192, 57, 43, 0.6);
+}
+
+.reset-btn:active {
+  background-color: #a93226;
+  box-shadow: 0 2px 4px rgba(169, 50, 38, 0.8);
+  transform: translateY(2px);
+}
+
+/* Dark mode básico para essa área */
+body.dark-mode .product {
+  background: #333;
+  border-color: #555;
+  color: #ddd;
+}
+
+body.dark-mode .price,
+body.dark-mode .total,
+body.dark-mode .qty-controls span {
+  color: #ddd;
+}
+
+body.dark-mode .qty-controls button,
+body.dark-mode .checkout-btn,
+body.dark-mode .reset-btn {
+  background-color: #ff4081;
+}
+
+body.dark-mode .qty-controls button:hover,
+body.dark-mode .checkout-btn:hover,
+body.dark-mode .reset-btn:hover {
+  background-color: #e91e63;
+}
+
+.product img {
+  width: 30%;
+  max-width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.product img {
+  display: block;
+  margin-bottom: 30px; /* ajusta o valor como preferir */
+  max-width: 30%;
+  height: auto;
+}

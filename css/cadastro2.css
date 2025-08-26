@@ -1,0 +1,397 @@
+/* Importa a fonte Roboto do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+
+
+
+.justify-center{
+  display: flex;
+  justify-content: center;
+}
+
+
+#msgError{
+  text-align: center;
+  color: #ff0000;
+  background-color: #ffbbbb;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+#msgSuccess{
+  text-align: center;
+  color: #00bb00;
+  background-color: #bbffbe;
+  padding: 10px;
+  border-radius: 4px;
+  display: none;
+}
+
+
+.interface{
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+footer{
+  background-color:#b30059;
+  color: #fff;
+  padding: 40px 0;
+  border-bottom: 2px solid #fff;
+}
+
+footer .line-footer1{
+  text-align: center;
+}
+
+footer .box-line-footer img{
+  max-width: 100px;
+  margin-bottom: 10px;
+
+}
+
+footer .line-footer2{
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+}
+
+footer .line-footer2 .box-line-footer{
+  max-width: calc(100% / 5);
+}
+
+.line-footer2 .box-line-footer h3{
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.line-footer2 .box-line-footer a{
+  color: #fff;
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  font-size: .9rem;
+}
+
+.box-line-footer .btn-redes a{
+  display: inline;
+}
+
+.line-footer2 .box-line-footer button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: .2s;
+}
+
+.line-footer2 .box-line-footer button:hover{
+  background-color: #fff;
+  border-color: #fff;
+}
+
+footer .line-footer3{
+  padding-top:40px;
+  text-align: center;
+}
+
+
+/* Reset de estilos e fonte padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Espaçamento do logo */
+.imagem {
+    padding: 0px 300px 0px 0px;
+}
+
+/* Estilização do corpo da página */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(243, 112, 182, 0.829)); /* Degradê rosa */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+/* Caixa principal do formulário */
+.box {
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    background-color: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 10px;
+    color: rgb(202, 84, 149);
+    padding: 30px 40px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+/* Título do formulário */
+.box h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+/* Container dos inputs */
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+}
+
+/* Estilo dos campos de input */
+.input-box input {
+    width: 88%;
+    height: 45%;
+    background-color: white;
+    border: 2px solid;
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #CA5495;
+    padding: 10px 45px 10px 15px;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Placeholder dos inputs */
+.input-box input::placeholder {
+    color: rgba(202, 84, 149, 0.425);
+}
+
+/* Ícones dos inputs */
+.input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-60%);
+    font-size: 20px;
+}
+
+/* Estilo do campo select (gênero) */
+.input-box select {
+    width: 102%;
+    height: 48px;
+    background-color: white;
+    border: 2px solid rgba(202, 84, 149, 0.425);
+    border-radius: 40px;
+    outline: none;
+    font-size: 16px;
+    color: #CA5495;
+    padding: 12px 20px;
+    font-weight: 600;
+}
+
+/* Estilo das opções do select */
+.input-box select option {
+    background-color: white;
+    color: rgb(202, 84, 149);
+}
+
+/* Container de lembrar senha e link */
+.lembrar-se {
+    display: flex;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+}
+
+/* Checkbox */
+.lembrar-se label input {
+    accent-color: #fff;
+    margin-right: 3px;
+}
+
+/* Link de esqueci minha senha */
+.lembrar-se a {
+    text-decoration: none;
+    color: rgb(202, 84, 149);
+}
+/* Botão de cadastro */
+.Cadastre-se {
+    width: 100%;
+    height: 45px;
+    background-color: #F8ACD5;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(224, 111, 173);
+    font-weight: 600;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.Cadastre-se:hover {
+    background-color: #ec93c3;
+    transition: 0.4s;
+}
+
+/* Container para o link de voltar */
+.voltar {
+    text-align: center;
+    padding: 20px 0px 0px 10px;
+}
+
+.voltar a{
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(202, 84, 149);
+}
+.Cadastre-se button {
+    width: 100%;
+    height: 45px;
+    background-color: white; /* botão branco */
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: rgb(202, 84, 149); /* texto em rosa */
+    font-weight: 600;
+    box-shadow: white;
+}
+
+.Cadastre-se button:hover {
+    background-color: #f0f0f0; /* leve cinza ao passar o mouse */
+    transition: 0.3s;
+}
+/* Modo Escuro */
+body.dark-mode {
+  background: linear-gradient(to bottom, #181818, #2b2b2b);
+  color: #f0f0f0;
+}
+
+body.dark-mode input,
+body.dark-mode select {
+  background-color: #333;
+  color: #f0f0f0;
+  border-color: #555;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode select option {
+  color: #aaa;
+}
+
+body.dark-mode .Cadastre-se button {
+  background-color: #555;
+  color: #f8acd5;
+}
+
+body.dark-mode .voltar a {
+  color: #f8acd5;
+}
+
+body.dark-mode .darkmode button {
+  color: #f8acd5;
+}
+
+body.dark-mode .botao-cadastrar {
+  background: linear-gradient(45deg, #555, #555);
+  color: #f8acd5;
+}
+
+body.dark-mode .botao-cadastrar:hover {
+  background: linear-gradient(45deg, #31313152, #31313152);
+}
+
+.botao-cadastrar {
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(45deg, #f06292, #f06292);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.botao-cadastrar:hover {
+  background: linear-gradient(45deg, #ec407a, #ec407a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.botao-cadastrar:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para campos de input com erro */
+input.error, select.error {
+  border: 2px solid #e63946;
+  background-color: #ffe5e5;
+  outline: none;
+}
+
+/* Rótulos com erro */
+label.error {
+  color: #e63946 !important;
+  font-weight: bold;
+}
+
+/* Mensagens de erro ou sucesso */
+#msgError, #msgSuccess {
+  margin-bottom: 10px;
+  font-size: 14px;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+#msgError {
+  background-color: #ffe5e5;
+  color: #b00020;
+  border: 1px solid #b00020;
+}
+
+#msgSuccess {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+@media (max-width: 600px) {
+  .input-box input,
+  .input-box select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .input-box {
+    height: auto;
+    margin: 15px 0;
+  }
+
+  .box h1 {
+    font-size: 28px;
+  }
+
+  footer .line-footer2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  footer .line-footer2 .box-line-footer {
+    max-width: 100%;
+    text-align: center;
+  }
+}

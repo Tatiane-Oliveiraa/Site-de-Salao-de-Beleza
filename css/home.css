@@ -1,0 +1,33 @@
+body {
+    background-image: linear-gradient(rgba(255,0,0,0), rgba(247,194,222,1));/* fazer o degrade */
+    background-repeat: no-repeat;
+    background-attachment: fixed;/* nao repetir o degrade */
+    background-size: 100% 100%;
+    font-family: 'Montserrat';font-size: 16px;/* fonte da letras */
+}
+
+
+.logo{ /* imagem da logo */
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background: white;
+  border-bottom: 3px solid pink;
+}
+
+.cabecalho a{ /* parte dos textos do cabecalho */
+    color: black;
+    text-decoration: none;
+    margin: 20px; /* o tamanho do afastamento entre eles */
+}
+
+.profile{ /* icone do perfil */
+    float: right;
+}

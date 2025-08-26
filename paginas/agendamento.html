@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamento</title>
+  <link rel="shortcut icon" href="/imagens/LOGO2.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/agendamento.css">
+  <link rel="stylesheet" href="/css/home.css"> <!-- link para o css -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'> <!-- link da fonte Monstserrat -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo"><img src="../imagens/LOGO.png" alt="Logo"></div> <!-- nossa logo -->
+    <nav class="cabecalho">
+      <a href="../index.html">Home</a>
+      <a href="carrinho.html">Carrinho</a>
+      <a href="agendamento.html">Agendamento</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html">Login</a>
+      <a href="cadastro2.html">Cadastre-se</a>
+
+      <div class="font-buttons">
+        <button id="increase-font" title="Letras maiores">A+</button>
+        <button id="normal-font" title="Letras normais">A</button>
+      </div>
+    </nav>
+
+  </header>
+
+  <div class="top-actions">
+    <span id="welcome-user" class="user-nome"></span>
+    <button id="btn-logout" onclick="logout()">Logout</button>
+    <button id="toggle-dark">🌙 Modo Escuro</button>
+  </div>
+
+  <div class="form-container">
+    <h2>Agende seu horário</h2>
+    <div id="servico-detalhes" class="servico-detalhes-container">
+      <div class="servico-info">
+        <p><strong>Serviço:</strong> <span id="nome-servico"></span></p>
+        <p><strong>Valor:</strong> R$ <span id="valor-servico-exibe"></span></p>
+      </div>
+    </div>
+
+    <div class="voltar-servico">
+      <button id="btn-voltar-servico">
+        <i class="fas fa-arrow-left"></i> Escolher outro serviço
+      </button>
+    </div>
+
+
+
+    <form id="agendamento-form">
+      <label for="data">Data</label>
+      <input type="date" id="data" required />
+
+      <label for="hora">Horário</label>
+      <select id="hora" required>
+        <option value="">Escolha</option>
+        <option>09:00</option>
+        <option>10:00</option>
+        <option>11:00</option>
+        <option>14:00</option>
+        <option>15:00</option>
+        <option>16:00</option>
+      </select>
+
+      <label for="mensagem">Mensagem ao prestador</label>
+      <textarea id="mensagem" placeholder="Escreva algo opcional..."></textarea>
+
+      <div id="aviso-cancelamento">
+        <p><strong>Aviso:</strong> Cancele com 48h de antecedência.</p>
+      </div>
+
+      <button type="submit">Confirmar Agendamento</button>
+    </form>
+  </div>
+
+  <div id="mensagem-confirmacao" class="mensagem-confirmacao-container"></div>
+
+  <div id="lista-agendamentos" class="painel-agendamentos">
+    <h3>Seus Agendamentos</h3>
+    <ul id="agendamentos-lista"></ul>
+  </div>
+
+  <footer>
+    <div class="interface">
+
+      <section class="line-footer2">
+
+        <div class="box-line-footer">
+
+          <img src="/imagens/LOGO2.png" alt="Logotipo Studio Sublime">
+
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Links úteis</h3>
+          <div class="links-footer">
+            <a href="paginas/agendamento.html" target="_blank">Agendamento</a>
+            <a href=''>Contato</a> <!--falta colocar o contato -->
+            <a href="paginas/cadastro.html" target="_blank">Cadastro</a>
+          </div>
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Serviços</h3>
+          <div class="links-footer">
+            <a href="paginas/cabeleleiro.html" target="_blank">Cabelo</a>
+            <a href="paginas/manicureepedicure.html" target="_blank">Unha</a> <!--falta colocar o contato -->
+            <a href="paginas/depilacao.html" target="_blank">Depilação</a>
+            <a href="paginas/sobrancelha.html" target="_blank">Design de Sombrancelha</a>
+            <a href="paginas/cilios.html" target="_blank">Extensão de Cílios</a>
+
+
+          </div>
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Contato</h3>
+          <div class="links-footer">
+            <a href="https://wa.me/+5521975383907" target="_blank">Whatsapp</a>
+            <a href="https://www.instagram.com/nails.claram/" target="_blank">Instagram</a>
+          </div>
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Siga-me</h3>
+          <div class="btn-redes">
+            <a href="https://www.instagram.com/nails.claram/" target="_blank"><button><i
+                  class="fab fa-instagram"></i></button></a> <!--Botão Do Instagram-->
+            <a href="https://wa.me/+5521975383907" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>
+            <!--Botão Do Whatsapp-->
+            <a href="https://www.tiktok.com/@nails.claram?_t=ZM-8wGc06HJsEI&_r=1" target="_blank"><button><i
+                  class="fab fa-tiktok"></i></i></button></a> <!--Botão Do Tiktok-->
+
+
+          </div>
+        </div>
+
+      </section>
+
+      <section class="line-footer3">
+        <p>Todos os direitos reservados &copy; 2025</p>
+
+      </section>
+
+    </div>
+  </footer>
+
+  <script>
+    const increaseFontBtn = document.getElementById("increase-font");
+    const normalFontBtn = document.getElementById("normal-font");
+
+    // Função para aumentar a fonte
+    increaseFontBtn.addEventListener("click", () => {
+      document.body.style.fontSize = "24px"; // Exemplo de tamanho maior
+      localStorage.setItem("fontSize", "24px");
+    });
+
+    // Função para voltar ao normal
+    normalFontBtn.addEventListener("click", () => {
+      document.body.style.fontSize = "18px"; // Tamanho normal original
+      localStorage.setItem("fontSize", "18px");
+    });
+
+    // Ao carregar a página, verifica o tamanho salvo no localStorage
+    const savedFontSize = localStorage.getItem("fontSize");
+    if (savedFontSize) {
+      document.body.style.fontSize = savedFontSize;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Verifica o estado do modo escuro a partir do localStorage
+      const toggleBtn = document.getElementById("toggle-dark");
+
+      // Função para alternar entre modo claro e escuro
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("modoEscuro", isDark);
+        toggleBtn.textContent = isDark ? "☀️ Modo Claro" : "🌙 Modo Escuro";
+      });
+
+      // Ao carregar a página, aplica a configuração salva no localStorage
+      const isDark = localStorage.getItem("modoEscuro") === "true";
+      if (isDark) {
+        document.body.classList.add("dark-mode");
+        toggleBtn.textContent = "☀️ Modo Claro";
+      }
+    });
+  </script>
+  <script src="/javascript/agendamento.js" defer></script>
+</body>
+
+</html>

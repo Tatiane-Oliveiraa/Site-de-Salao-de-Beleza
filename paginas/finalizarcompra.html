@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Pagamento via PIX | Studio Sublime</title>
+  <link rel="shortcut icon" href="../imagens/LOGO2.png" type="image/x-icon" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/finalizar.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+
+<body class="page-pagamento">
+  <header class="page-carrinho-header">
+    <div class="logo"><img src="../imagens/LOGO.png" alt="Logo Studio Sublime" /></div>
+    <nav class="cabecalho">
+      <a href="../index.html">Home</a>
+      <a href="carrinho.html">Carrinho</a>
+      <a href="agendamento.html">Agendamento</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html">Login</a>
+      <a href="cadastro2.html">Cadastre-se</a>
+
+      <div class="font-buttons">
+        <button id="increase-font" title="Letras maiores">A+</button>
+        <button id="normal-font" title="Letras normais">A</button>
+      </div>
+    </nav>
+
+
+    <div class="darkmode">
+      <button id="toggle-dark">🌙 Modo Escuro</button>
+    </div>
+  </header>
+
+  <main>
+    <h1>Pagamento via PIX</h1>
+
+    <section class="payment-method">
+      <i class="fas fa-qrcode"></i>
+      <h2>PIX</h2>
+      <p>Faça seu pagamento rápido e seguro pelo PIX. Basta escanear o QR Code abaixo no seu aplicativo bancário.</p>
+      <img
+        src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=00020126360014BR.GOV.BCB.PIX0114%2B55219753839075204000053039865802BR5925Maria%20Clara%20Leal%20Mendonca6009SAO%20PAULO6214051060YMZPHGKr63040CBD"
+        alt="QR Code PIX Nubank" style="border-radius:8px; margin-top: 10px;" />
+    </section>
+  </main>
+
+  <footer>
+    <div class="interface">
+      <section class="line-footer2">
+        <div class="box-line-footer">
+          <img src="../imagens/LOGO2.png" alt="Logotipo Studio Sublime" />
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Links úteis</h3>
+          <div class="links-footer">
+            <a href="agendamento.html">Agendamento</a>
+            <a href="contato.html">Contato</a>
+            <a href="cadastro.html">Cadastro</a>
+          </div>
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Serviços</h3>
+          <div class="links-footer">
+            <a href="cabeleleiro.html">Cabelo</a>
+            <a href="manicureepedicure.html">Unha</a>
+            <a href="depilacao.html">Depilação</a>
+            <a href="sobrancelha.html">Design de Sobrancelha</a>
+            <a href="cilios.html">Extensão de Cílios</a>
+          </div>
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Contato</h3>
+          <div class="links-footer">
+            <a href="https://wa.me/+5521975383907" target="_blank">Whatsapp</a>
+            <a href="https://www.instagram.com/nails.claram/" target="_blank">Instagram</a>
+          </div>
+        </div>
+
+        <div class="box-line-footer">
+          <h3>Siga-me</h3>
+          <div class="btn-redes">
+            <a href="https://www.instagram.com/nails.claram/" target="_blank"><button><i
+                  class="fab fa-instagram"></i></button></a>
+            <a href="https://wa.me/+5521975383907" target="_blank"><button><i class="fab fa-whatsapp"></i></button></a>
+            <a href="https://www.tiktok.com/@nails.claram" target="_blank"><button><i
+                  class="fab fa-tiktok"></i></button></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="line-footer3">
+        <p>Todos os direitos reservados &copy; 2025</p>
+      </section>
+    </div>
+  </footer>
+
+  <script src="/javascript/carrinho.js"></script>
+  <script>
+    const increaseFontBtn = document.getElementById("increase-font");
+    const normalFontBtn = document.getElementById("normal-font");
+
+    // Função para aumentar a fonte
+    increaseFontBtn.addEventListener("click", () => {
+      document.body.style.fontSize = "24px"; // Exemplo de tamanho maior
+      localStorage.setItem("fontSize", "24px");
+    });
+
+    // Função para voltar ao normal
+    normalFontBtn.addEventListener("click", () => {
+      document.body.style.fontSize = "18px"; // Tamanho normal original
+      localStorage.setItem("fontSize", "18px");
+    });
+
+    // Ao carregar a página, verifica o tamanho salvo no localStorage
+    const savedFontSize = localStorage.getItem("fontSize");
+    if (savedFontSize) {
+      document.body.style.fontSize = savedFontSize;
+    }
+  </script>
+</body>
+
+</html>

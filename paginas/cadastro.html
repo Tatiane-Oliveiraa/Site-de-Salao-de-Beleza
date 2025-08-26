@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Página de Cadastro</title>
+  <link rel="shortcut icon" href="../imagens/LOGO2.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Ícones -->
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <!-- CSS do formulário -->
+  <link rel="stylesheet" href="/css/cadastro.css">
+</head>
+<body>
+  <!-- Botão de modo escuro -->
+  <div class="darkmode" style="position: absolute; top: 20px; right: 30px;">
+    <button id="toggle-dark" style="
+      background-color: transparent;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      color: rgb(202, 84, 149);
+    ">🌙 Modo Escuro</button>
+  </div>
+
+  <!-- Formulário -->
+  <main class="box">
+    <form id="cadastroForm" onsubmit="validarFormulario(event)">
+      <h1>Cadastre-se</h1>
+
+      <div class="input-box">
+        <input type="text" id="usuario" placeholder="Usuário" required>
+        <i class="bx bx-user"></i>
+        <label for="usuario" id="labelUsuario" style="color: red;"></label>
+      </div>
+
+      <div class="input-box">
+        <input type="email" id="email" placeholder="E-mail" required>
+        <i class="bx bx-envelope"></i>
+        <label for="email" id="labelEmail" style="color: red;"></label>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="celular" placeholder="Telefone" oninput="atualizarTelefone(event)">
+        <i class="bx bx-phone"></i>
+        <div id="erroTelefone" style="color: red;"></div>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="cpf" placeholder="CPF" oninput="formatarCPF(this)">
+        <i class="bx bx-id-card"></i>
+        <div id="erroCpf" style="color: red;"></div>
+      </div>
+
+      <div class="input-box">
+        <input placeholder="CEP" type="text" id="cep" maxlength="9" required oninput="formatarCEP(this)" onblur="buscarCEP()">
+        <i class="bx bx-map"></i>
+      </div>
+
+      <div class="input-box">
+        <input placeholder="Endereço" type="text" id="endereco" required name="endereco">
+        <i class="bx bx-map-pin"></i>
+      </div>
+
+      <div class="input-box">
+        <input placeholder="Bairro" type="text" id="bairro" required>
+        <i class="bx bx-building-house"></i>
+      </div>
+
+      <div class="input-box">
+        <input placeholder="Número da casa" type="text" maxlength="7" required>
+        <i class="bx bx-home"></i>
+      </div>
+
+      <div class="input-box">
+        <input placeholder="Data de nascimento" type="date" required>
+        <i class="bx bx-calendar"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="senha" placeholder="Senha" required>
+        <i class="bx bx-lock-alt"></i>
+        <label id="labelSenha" for="senha" style="color: red;"></label>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="confirmarSenha" placeholder="Confirmar Senha" required>
+        <i class="bx bx-lock-open"></i>
+        <label id="labelConfirmSenha" for="confirmarSenha" style="color: red;"></label>
+      </div>
+
+      <div class="input-box">
+        <select id="genero" required>
+          <option value="0" disabled hidden selected>Escolha um Gênero</option>
+          <option value="masculino">Masculino</option>
+          <option value="feminino">Feminino</option>
+          <option value="outro">Outro</option>
+        </select>
+        <i class="bx bx-user-circle"></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="pin" placeholder="PIN" required>
+        <i class="bx bx-key"></i>
+        <label id="labelPin" for="pin" style="color: red;"></label>
+      </div>
+
+      <div class="lembrar-se">
+        <label><input type="checkbox"> Lembrar-se</label>
+        <a href="#">Esqueci minha senha</a>
+      </div>
+
+      <div class="Cadastre-se">
+        <button type="button" onclick="cadastrar()">Cadastrar</button>
+      </div>
+
+      <div class="voltar">
+        <a href="../index.html">Página Inicial</a>
+      </div>
+    </form>
+  </main>
+
+  <!-- JavaScript -->
+  <script src="../javascript/cadastro.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const toggleBtn = document.getElementById("toggle-dark");
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        const isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("modoEscuro", isDark);
+        toggleBtn.textContent = isDark ? "☀️ Modo Claro" : "🌙 Modo Escuro";
+      });
+
+      if (localStorage.getItem("modoEscuro") === "true") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("toggle-dark").textContent = "☀️ Modo Claro";
+      }
+    });
+  </script>
+</body>
+</html>

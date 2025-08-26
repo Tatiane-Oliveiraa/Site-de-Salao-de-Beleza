@@ -1,0 +1,441 @@
+/* RESET BÁSICO */
+body, html {
+  background-image: linear-gradient(rgba(255,0,0,0), rgba(247,194,222,1));/* fazer o degrade */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #ffe6f0;
+  padding-bottom: 0px;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo{ /* imagem da logo */
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  flex-wrap: wrap;
+  background: white;
+  border-bottom: 3px solid pink;
+}
+
+nav.cabecalho {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex: 1;
+}
+
+
+.cabecalho a{ /* parte dos textos do cabecalho */
+    color: black;
+    text-decoration: none;
+    margin: 20px; /* o tamanho do afastamento entre eles */
+}
+
+.profile{ /* icone do perfil */
+    float: right;
+}
+
+
+
+.top-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1;
+
+}
+
+#btn-logout,
+#toggle-dark {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  background-color: #b30059;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn-logout:hover,
+#toggle-dark:hover {
+  background-color: #e60073;
+}
+
+/* FORMULÁRIO */
+.form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* SERVIÇO DETALHES */
+.servico-detalhes-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  background: #fff5f9;
+  padding: 15px;
+  border: 1px solid #ffb3d9;
+  border-radius: 10px;
+}
+
+.servico-detalhes-container img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ff70a6;
+}
+
+.servico-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #b30059;
+}
+
+/* BOTÃO VOLTAR */
+.voltar-servico {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+#btn-voltar-servico {
+  background-color: #eeeeee;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+}
+
+#btn-voltar-servico:hover {
+  background-color: #ddd;
+}
+
+/* MENSAGEM DE CONFIRMAÇÃO */
+.mensagem-confirmacao-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #f0fff4;
+  border: 2px solid #38a169;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #2f855a;
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mensagem-confirmacao-container.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LISTA DE AGENDAMENTOS */
+.painel-agendamentos {
+  width: 90%;
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+#agendamentos-lista li {
+  list-style: none;
+  margin-bottom: 15px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.cancelar-btn {
+  margin-top: 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+.cancelar-btn:hover {
+  background-color: #b02a37;
+}
+
+.cancelar-btn:active {
+  transform: scale(0.97);
+}
+
+/* FOOTER */
+footer {
+  background-color: #b30059;
+  color: #fff;
+  padding: 40px 0;
+  border-top: 4px solid #fff;
+}
+
+footer .interface {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+footer .line-footer2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #fff;
+}
+
+footer .box-line-footer {
+  flex: 1 1 180px;
+}
+
+footer .line-footer3{
+  padding-top:40px;
+  text-align: center;
+}
+
+.box-line-footer .btn-redes a{
+  display: inline;
+}
+
+.line-footer2 .box-line-footer button{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: .2s;
+}
+
+.line-footer2 .box-line-footer button:hover{
+  background-color: #fff;
+  border-color: #fff;
+}
+
+footer .box-line-footer img {
+  max-height: 200px;
+  width: auto;
+}
+
+
+.links-footer a {
+  display: block;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.links-footer a:hover {
+  color: #ffe3f1;
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-image: linear-gradient(rgba(255,0,0,0), rgb(0, 0, 0));/* fazer o degrade */
+  background-color: #121212;
+  color: white;
+}
+
+body.dark-mode .form-container {
+  background: #1c1c1c;
+  border: 1px solid #2c2a2a;
+}
+
+body.dark-mode .painel-agendamentos {
+  background-color: #000;
+}
+
+body.dark-mode #agendamentos-lista li {
+  background-color: #111;
+  border-color: #333;
+}
+
+body.dark-mode .mensagem-confirmacao-container {
+  background-color: #254f39;
+  border-color: #36c96d;
+  color: white;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode a {
+  color: #fec0e9;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  nav.cabecalho {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .top-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .form-container,
+  .mensagem-confirmacao-container,
+  .painel-agendamentos {
+    padding: 20px;
+    margin: 20px auto;
+  }
+
+  .servico-detalhes-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .servico-detalhes-container img {
+    margin-bottom: 10px;
+    width: 80px;
+    height: 80px;
+  }
+
+  footer .line-footer2 {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 20px;
+  }
+
+  footer .box-line-footer {
+    text-align: center;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container h2 {
+    font-size: 1.3rem;
+  }
+
+  input[type="date"],
+  select,
+  textarea {
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  button[type="submit"],
+  #btn-voltar-servico {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .cancelar-btn {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+  }
+
+  .logo {
+    max-width: 100px;
+    height: auto;
+    display: block;
+    
+  }
+}
+
